@@ -1,0 +1,11 @@
+script
+.project
+node_modules
+.babelrc
+package.json
+package-lock.json
+_docs
+.idea
+test/
+*.iml
+*.DS_Store
