@@ -428,7 +428,7 @@
 			<p>xm-select-search="/search", 指定一个url, 将开启远程搜索模式</p>
 			<div>
 				<div style="width: 400px; display: inline-block; vertical-align: top;">
-					<select name="city" xm-select="select8" xm-select-search="https://www.fastmock.site/mock/29487363107ab7d242c46305cadf4c52/formSelects/layui/data">
+					<select name="city" xm-select="select8" xm-select-search="../data/citys2.json">
 						<option value="1" disabled="disabled">北京</option>
 						<option value="2" selected="selected">上海</option>
 						<option value="3">广州</option>
@@ -456,7 +456,7 @@
 			<p>当然, 远程搜索也是可以分组的</p>
 			<div>
 				<div style="width: 400px; display: inline-block; vertical-align: top;">
-					<select name="city" xm-select="select8_2" xm-select-search="https://www.fastmock.site/mock/29487363107ab7d242c46305cadf4c52/formSelects/layui/group">
+					<select name="city" xm-select="select8_2" xm-select-search="../data/group.json">
 						<option value="1" disabled="disabled">北京</option>
 						<option value="2" selected="selected">上海</option>
 						<option value="3">广州</option>
@@ -1384,7 +1384,7 @@ layui.formSelects.config({direction: 'up'});
 			<div>
 				<div style="width: 400px; display: inline-block; vertical-align: top;">
 					<div class="layui-form">
-						<select name="city" xm-select="example7_2" xm-select-search="https://www.fastmock.site/mock/29487363107ab7d242c46305cadf4c52/formSelects/layui/data"></select>
+						<select name="city" xm-select="example7_2" xm-select-search="../data/citys2.json"></select>
 						<js>
 							layui.formSelects.search('example7_2', 'click');
 						</js>
@@ -2472,7 +2472,7 @@ formSelects.closed(function(id){
 				}
 			});
 			formSelects.data('select15_2', 'server', {
-			    url: 'http://yapi.demo.qunar.com/mock/9813/layui/citys',
+			    url: '../data/citys.json',
 			    linkage: true,
 			    linkageWidth: 130,
 			});
@@ -2501,10 +2501,10 @@ formSelects.closed(function(id){
 			    return true;
 			});
 			formSelects.config('example5_1', {
-				searchUrl: 'https://www.fastmock.site/mock/29487363107ab7d242c46305cadf4c52/formSelects/layui/data'
+				searchUrl: '../data/citys2.json'
 			});
 			formSelects.config('example5_3', {
-				searchUrl: 'https://www.fastmock.site/mock/29487363107ab7d242c46305cadf4c52/formSelects/layui/data',
+				searchUrl: '../data/citys2.json',
 				beforeSuccess: function(id, url, searchVal, result){
 					//我要把数据外层的code, msg, data去掉
 					result = result.data;
@@ -2517,13 +2517,13 @@ formSelects.closed(function(id){
 				}
 			});
 			formSelects.config('example5_4', {
-				searchUrl: 'https://www.fastmock.site/mock/29487363107ab7d242c46305cadf4c52/formSelects/layui/data',
+				searchUrl: '../data/citys2.json',
 				success: function(id, url, searchVal, result){
 					formSelects.value('example5_4', [3, 4]);
 				}
 			});
 			formSelects.config('example5_5', {
-				searchUrl: 'https://www.fastmock.site/mock/29487363107ab7d242c46305cadf4c52/formSelects/layui/data',
+				searchUrl: '../data/citys2.json',
 				success: function(id, url, searchVal, result){
 					formSelects.value('example5_5', [result.data[0].value, result.data[4].value]);
 				}
@@ -2548,10 +2548,10 @@ formSelects.closed(function(id){
 					return result;
 				}
 			}).data('example6_2', 'server', {
-			    url: 'https://www.fastmock.site/mock/29487363107ab7d242c46305cadf4c52/formSelects/layui/data'
+			    url: '../data/citys2.json'
 			});
 			formSelects.data('example6_3', 'server', {
-			    url: 'https://www.fastmock.site/mock/29487363107ab7d242c46305cadf4c52/formSelects/layui/data',
+			    url: '../data/citys2.json',
 			    beforeSuccess: function(id, url, searchVal, result){
 					//我要把数据外层的code, msg, data去掉
 					result = result.data;
@@ -2577,7 +2577,7 @@ formSelects.closed(function(id){
 				]
 			});
 			formSelects.config('example7_1', {
-				searchUrl: 'https://www.fastmock.site/mock/29487363107ab7d242c46305cadf4c52/formSelects/layui/data', 
+				searchUrl: '../data/empty-data', 
 				beforeSearch: function(id, url, val){
 					if(!val){
 						console.log('内容为空, 不进行远程搜索')
